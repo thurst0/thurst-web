@@ -6,7 +6,7 @@ thApp.controller('GlobalController', function GlobalController($scope, $rootScop
 		resume: false,
 		home: true
 	}
-	$scope.title = 
+	$scope.title = "";
 	$scope.show = function(div){
 		console.log(div);
 		if(div=="home"){
@@ -14,7 +14,7 @@ thApp.controller('GlobalController', function GlobalController($scope, $rootScop
 			//dataWord();
 		}else if(div=="resume"){
 			$scope.title = "RESUME";
-		}else if(div=="Contact"){
+		}else if(div=="contact"){
 			$scope.title = "CONTACT";
 		}
 		$scope.page.contact = false;
