@@ -8,7 +8,57 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="thweb.css" type="text/css"> 
+<style type= text/css>
+	html *{ 
+ /* text-transform: uppercase; */
+font-family: 'Open Sans Condensed', Arial, sans-serif;
+text-align: center;
+}
+body {
+    background-image: url("gcbw.jpg");
+    background-repeat: no-repeat;
+	  background-size:100% 100%; 
+	    color: white;
+}
+.opaque {
+opacity:1;
+}
+ .navbar{
+           background-color: transparent;
+    background: transparent;
+   /* border-width: 1px; */
+	border: none;
+        border-radius: 0;
+        background-color: rgba(0,0,0,0.1);
+		 font-family: 'FuturaBook', Arial, sans-serif !important;
 
+  font-size: 20pt;
+  text-transform: uppercase;
+    }
+.circle {
+	border-radius: 50%;
+	width: 200px;
+	height: 200px; 
+	/* width and height can be anything, as long as they're equal */
+}
+.bw{
+	filter: grayscale(1);
+}
+img.hover{
+	filter: grayscale(0);
+}
+p{font-family: 'Open Sans Condensed', sans-serif; font-size: 20pt;}
+
+/* WORDS SWAP */
+[data-words]{
+  vertical-align: top;
+  position: static;
+}
+[data-words] > span{
+  position: absolute;
+  color: chocolate;
+}
+</style>
 </head>
 <body class="bgmain" ng-controller="GlobalController">
 <!-- NAVBAR -->
