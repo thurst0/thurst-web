@@ -1,38 +1,16 @@
-
+<html ng-app="thApp">
 <head>
 
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="thweb.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="thweb.css" type="text/css"> 
-	<style type="text/css" >
-		html *{  font-size: 20pt;
-  text-transform: uppercase;
-font-family: 'FuturaBook', Arial, sans-serif;
-}
-body {
-    background-image: url("GCBW.jpg");
-    background-repeat: no-repeat;
-	  background-size:100% 100%; 
-	    color: white;
-}
-.opaque {
-opacity:1;
-}
- .navbar{
-           background-color: transparent;
-    background: transparent;
-   /* border-width: 1px; */
-	border: none;
-        border-radius: 0;
-        background-color: rgba(0,0,0,0.1);
-		 font-family: 'FuturaBook', Arial, sans-serif;
 
-  font-size: 20pt;
-  text-transform: uppercase;
-    }
-	</style>
 </head>
-<body class="bgmain">
+<body class="bgmain" ng-controller="GlobalController">
 <!-- NAVBAR -->
 	<nav class="navbar navbar-inverse opaque" id="navOp">
 		<div class="navbar-header opaque">
@@ -42,24 +20,62 @@ opacity:1;
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" href="#/index"><i class="fa fa-facebook"></i></a><!--img src="assets/mobe3_logo.png" alt="Mobe3 Web"></a-->
+		<a class="navbar-brand" href="index.html" ng-click="show('home')"><i class="fa fa-facebook"></i></a><!--img src="assets/mobe3_logo.png" alt="Mobe3 Web"></a-->
 		</div>
 		<div class="container-fluid">
 		<ul class="nav navbar-nav">
-		  <li><a href="#/Blog">Blog</a></li>
-		  <li><a href="/Resume.html">Resume</a></li>
-		  <li><a href="/Contact.html">Contact</a></li>
+		  <li><a href="#/Blog">BLOG</a></li>
+		  <li><a href="#resume" ng-click="show('resume')">RESUME</a></li>
+		  <li><a href="#contact" ng-click="show('contact')">CONTACT</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
-		  <!--li ng-if="isloggedin"><a href=""><span class="glyphicon glyphicon-info-sign" ng-click="openmodal()"></span></a></li-->
+		  <li><a class="navbar-brand" href="https://www.facebook.com/tonyhurstproducer/"><i class="fa fa-facebook"></i></a></li>
 		</ul>
 		</div>
 	</nav>
-<div  class="opaque" style="">
-	TONY HURST - SOFTWARE DEVELOPER
-	<br><br>
-	<br><br><br><br><br>
-	WHERE BIG IDEAS COME ALIVE
-	
+<div class="opaque" style="" id>
+	<h1 ng-cloak="">{{title}}</h1>
+	<div id="home" ng-hide="!page.home">	
+		<p>Tony Hurst</p><p>software <span data-words="developer|designer|engineer"></span></p>
+		<p>bringing big ideas to life from <span data-words="colorado|california|arizona"></span></p>
+		<img src="th.jpg" class="circle bw">
+	</div>
+	<div id="contact" ng-if="page.contact" style="background-color:black">
+		<div class ="row">
+			<div class="col-md-4" style="text-align:left">
+					<p style="text-align:right">Email</p>
+			</div>
+			<div class="col-md-8" style="">
+				<p style="text-align:left">hurs4529@bears.unco.edu</p>
+			</div>
+		</div>
+		<div class ="row">
+			<div class="col-md-4" style="text-align:left">
+					<p style="text-align:right">Phone</p>
+			</div>
+			<div class="col-md-8" style="">
+				<p style="text-align:left"></p>
+			</div>
+		</div>
+	</div>
+	<div id="resume" ng-if="page.resume" style="background-color:black">
+		<div class="row">
+			<div class="col-md-4">
+				<p style="text-align:right">Skills</p>
+			</div>
+			<div class="col-md-8" style="">
+				<p style="text-align:left">HTML, CSS, Javascript</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4" style="text-align:left">
+				<p style="text-align:right">Background</p>
+			</div>
+			<div class="col-md-8" style="">
+				<p style="text-align:left">Software Developer residing in Boulder, Colorado</p>
+			</div>
+		</div>
+	</div>
 </div>
 </body>
+</html>
