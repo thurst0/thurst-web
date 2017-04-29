@@ -78,6 +78,9 @@ p{font-family: 'Open Sans Condensed', sans-serif; font-size: 20pt;}
 	font-family: 'MyWebFont';
 	 text-transform: lowercase !important;
 }
+.half-black {
+  background: rgba(0, 0, 0, 0.5);
+}
 </style>
 </head>
 <body class="bgmain" ng-controller="GlobalController">
@@ -126,7 +129,7 @@ p{font-family: 'Open Sans Condensed', sans-serif; font-size: 20pt;}
 		    </a></li>
 		</ul>    
 	</div>
-	<div id="contact" ng-if="page.contact" style="background-color:black">
+	<div id="contact" ng-if="page.contact" class="half-black opaque">
 		<div class ="row">
 			<div class="col-md-4" style="text-align:left">
 					<p style="text-align:right">Email</p>
