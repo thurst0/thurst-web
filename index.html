@@ -68,6 +68,14 @@ p{font-family: 'Open Sans Condensed', sans-serif; font-size: 20pt;}
   position: absolute;
   color: chocolate;
 }
+@font-face {
+  font-family: 'MyWebFont';
+  src: url(alscrp.ttf);
+  font-weight: bold;
+}
+.cursive{
+	font-family: 'MyWebFont', sans-serif;
+}
 </style>
 </head>
 <body class="bgmain" ng-controller="GlobalController">
@@ -97,7 +105,7 @@ p{font-family: 'Open Sans Condensed', sans-serif; font-size: 20pt;}
 <div class="opaque" style="" id>
 	<h1 ng-cloak="">{{title}}</h1>
 	<div id="home" ng-hide="!page.home">	
-		<p>Tony Hurst</p><p>software <span data-words="developer|designer|engineer"></span></p>
+		<p class="cursive">Tony Hurst</p><p>software <span data-words="developer|designer|engineer"></span></p>
 		<p>bringing big ideas to life from <span data-words="colorado"></span></p>
 		<img src="th.jpg" class="circle bw"><br>
 		<ul class="list-inline">
