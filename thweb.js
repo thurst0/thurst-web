@@ -13,9 +13,9 @@ thApp.controller('GlobalController', function GlobalController($scope, $rootScop
 			$scope.title = "";
 			//dataWord();
 		}else if(div=="resume"){
-			$scope.title = "RESUME";
+			$scope.title = "Resume";
 		}else if(div=="contact"){
-			$scope.title = "CONTACT";
+			$scope.title = "Contact";
 		}
 		$scope.page.contact = false;
 		$scope.page.resume = false;
